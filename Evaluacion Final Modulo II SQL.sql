@@ -65,8 +65,34 @@ SELECT title
 
 /* Ejercicio Nº 9
 -- . Encuentra la cantidad total de películas en cada clasificación de la tabla film y muestra la clasificación junto con el recuento.
-###agrupo por rating y cuento el total de peliculas en cada rating?
 */
 SELECT rating, COUNT(*)
+	FROM film
+    GROUP BY rating;
+    
+/* Ejercicio Nº 10
+--Encuentra la cantidad total de películas alquiladas por cada cliente y muestra el ID del cliente, su nombre y apellido junto con la cantidad de películas alquiladas.
+*/
+SELECT customer.customer_id, customer.first_name, customer.last_name, COUNT(*) AS cant_alquileres
+	FROM customer
+	INNER JOIN rental ON customer.customer_id = rental.customer_id 
+    GROUP BY customer.customer_id;
+   
+
+/* Ejercicio Nº 11  
+-- Encuentra la cantidad total de películas alquiladas por categoría y muestra el nombre de la categoría junto con el recuento de alquileres.
+*/
+SELECT c.name, COUNT(*) AS recuento_alquileres
+	FROM category AS c
+    INNER JOIN film_category ON c.category_id = film_category.category_id
+    INNER JOIN inventory ON film_category.film_id = inventory.film_id
+    INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
+	GROUP BY c.name;
+   
+/* Ejercicio Nº 12  
+-- Encuentra el promedio de duración de las películas para cada clasificación de la tabla film y muestra la clasificación junto con el promedio de duración.
+###  AVR promedio de la duracion de la peli, agrupando por rating
+*/
+SELECT rating, AVG(length) AS promedio 
 	FROM film
     GROUP BY rating;
