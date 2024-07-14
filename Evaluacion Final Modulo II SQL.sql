@@ -46,3 +46,27 @@ SELECT first_name
 SELECT 	first_name, last_name
 	FROM actor
 	WHERE last_name LIKE '%Gibson%'; 
+    
+/* Ejercicio Nº 7  
+-- Encuentra los nombres de los actores que tengan un actor_id entre 10 y 20.
+###BETWEEN: seleciona los datos que estan dentro de un rango de valores
+*/
+SELECT first_name
+	FROM actor
+    WHERE actor_id BETWEEN 10 AND 20;
+    
+    /* Ejercicio Nº 8 
+-- Encuentra el título de las películas en la tabla film que no sean ni "R" ni "PG-13" en cuanto a su clasificación.
+###NOT IN excluye los valores que especifico
+*/
+SELECT title
+	FROM film
+    WHERE rating NOT IN ('R', 'PG-13');
+
+/* Ejercicio Nº 9
+-- . Encuentra la cantidad total de películas en cada clasificación de la tabla film y muestra la clasificación junto con el recuento.
+###agrupo por rating y cuento el total de peliculas en cada rating?
+*/
+SELECT rating, COUNT(*)
+	FROM film
+    GROUP BY rating;
