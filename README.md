@@ -1,4 +1,4 @@
-# 🎬 Evaluación Final Módulo 2 - Bootcamp de Análisis de Datos
+# 🎬 Evaluación Final Módulo 2 - Bootcamp de Análisis de Datos 
 
 ## 📄 Descripción
 
@@ -6,7 +6,7 @@ Esta evaluación se centra en el uso de SQL para extraer, manipular y analizar d
 
 ## 🎯 Objetivo
 
-El propósito de esta evaluación es poner a prueba las habilidades en SQL a través de una serie de ejercicios prácticos que permitirán trabajar con la base de datos `Sakila`.
+El propósito de esta evaluación es poner a prueba las habilidades obtenidas en SQL a través de una serie de ejercicios prácticos que permitirán trabajar con la base de datos `Sakila`.
 
 ## 📋 Requisitos Previos
 
@@ -16,8 +16,8 @@ El propósito de esta evaluación es poner a prueba las habilidades en SQL a tra
 
 ## 🛠️ Pasos para Ejecutar
 
-1. **Conéctate a la base de datos `Sakila`** utilizando tu herramienta de gestión de bases de datos.
-2. **Ejecuta las consultas SQL** en un archivo `.sql` para completar los ejercicios propuestos.
+1. **Conectarse a la base de datos `Sakila`** utilizando una herramienta de gestión de bases de datos.
+2. **Ejecutar las consultas SQL** en un archivo `.sql` para completar los ejercicios propuestos.
 
 ## 📝 Notas
 
